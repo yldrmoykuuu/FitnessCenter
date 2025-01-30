@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{094D395D-6CC0-4781-96B3-4EC6FB644BB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>sporcenter</RootNamespace>
+    <AssemblyName>sporcenter</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ClosedXML, Version=0.96.0.0, Culture=neutral, PublicKeyToken=fd1eb21b62ae805b, processorArchitecture=MSIL">
+      <HintPath>..\packages\ClosedXML.0.96.0\lib\net46\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.16.0.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.16.0\lib\net46\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.1.0.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.1.0\lib\net20\ExcelNumberFormat.dll</HintPath>
+    </Reference>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net45\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1001\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dbsporDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet10.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet13.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet5.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet6.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet6.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet7.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet8.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbsporDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbsporDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="genelislem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="genelislem.Designer.cs">
+      <DependentUpon>genelislem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Kaydol.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Kaydol.Designer.cs">
+      <DependentUpon>Kaydol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="kullanicianasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="kullanicianasayfa.Designer.cs">
+      <DependentUpon>kullanicianasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KullaniciGirisi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KullaniciGirisi.Designer.cs">
+      <DependentUpon>KullaniciGirisi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="pdfcevir.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pdfcevir.Designer.cs">
+      <DependentUpon>pdfcevir.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="silinenuye.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="silinenuye.Designer.cs">
+      <DependentUpon>silinenuye.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sporgöster.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sporgöster.Designer.cs">
+      <DependentUpon>sporgöster.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Yanasayfa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Yanasayfa.Designer.cs">
+      <DependentUpon>Yanasayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="yoneticigiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="yoneticigiris.Designer.cs">
+      <DependentUpon>yoneticigiris.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="genelislem.resx">
+      <DependentUpon>genelislem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Kaydol.resx">
+      <DependentUpon>Kaydol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="kullanicianasayfa.resx">
+      <DependentUpon>kullanicianasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KullaniciGirisi.resx">
+      <DependentUpon>KullaniciGirisi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pdfcevir.resx">
+      <DependentUpon>pdfcevir.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="silinenuye.resx">
+      <DependentUpon>silinenuye.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sporgöster.resx">
+      <DependentUpon>sporgöster.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Yanasayfa.resx">
+      <DependentUpon>Yanasayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="yoneticigiris.resx">
+      <DependentUpon>yoneticigiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="dbsporDataSet.xsc">
+      <DependentUpon>dbsporDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet.xss">
+      <DependentUpon>dbsporDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet1.xsc">
+      <DependentUpon>dbsporDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet1.xss">
+      <DependentUpon>dbsporDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet10.xsc">
+      <DependentUpon>dbsporDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet10.xss">
+      <DependentUpon>dbsporDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet11.xsc">
+      <DependentUpon>dbsporDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet11.xss">
+      <DependentUpon>dbsporDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet12.xsc">
+      <DependentUpon>dbsporDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet12.xss">
+      <DependentUpon>dbsporDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet13.xsc">
+      <DependentUpon>dbsporDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet13.xss">
+      <DependentUpon>dbsporDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet2.xsc">
+      <DependentUpon>dbsporDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet2.xss">
+      <DependentUpon>dbsporDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet3.xsc">
+      <DependentUpon>dbsporDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet3.xss">
+      <DependentUpon>dbsporDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet4.xsc">
+      <DependentUpon>dbsporDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet4.xss">
+      <DependentUpon>dbsporDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet5.xsc">
+      <DependentUpon>dbsporDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet5.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet5.xss">
+      <DependentUpon>dbsporDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet6.xsc">
+      <DependentUpon>dbsporDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet6.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet6.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet6.xss">
+      <DependentUpon>dbsporDataSet6.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet7.xsc">
+      <DependentUpon>dbsporDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet7.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet7.xss">
+      <DependentUpon>dbsporDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet8.xsc">
+      <DependentUpon>dbsporDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet8.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet8.xss">
+      <DependentUpon>dbsporDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet9.xsc">
+      <DependentUpon>dbsporDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="dbsporDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbsporDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbsporDataSet9.xss">
+      <DependentUpon>dbsporDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
